@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="10487588-B486-1568-352D-96305483FD73" name="T GS1 LAUDO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:23:37 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="T GS1 PACIENTE PCT CNS" id="26109B97-8A32-1CBC-910D-AD6639B238ED">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:28:31 UTC</createdTime>
+<generatorID>FCC0D2A6-EC35-479B-9B02-97E9B83713A3</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>4DED2207-8460-F230-CBF1-781F5815BFCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Laudo" id="A6324E7F-00AF-48B7-364B-D274167D1E50">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:23:55 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LD Frequencia" id="FA51BA5A-C24A-6C16-3A29-6484088C95E7">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:24:34 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LD Dt Inicial" id="53BDA324-9904-FF1A-C25B-2E69A2B90724">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:26:31 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A073005D-B28C-823C-A758-2EB24B7131E4" name="T_GS1_LAUDO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:23:57 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>26109B97-8A32-1CBC-910D-AD6639B238ED</attributeRef>
+<attributeRef>A6324E7F-00AF-48B7-364B-D274167D1E50</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

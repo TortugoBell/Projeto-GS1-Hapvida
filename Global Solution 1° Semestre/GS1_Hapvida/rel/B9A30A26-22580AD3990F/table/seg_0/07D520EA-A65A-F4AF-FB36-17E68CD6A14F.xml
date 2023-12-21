@@ -1,0 +1,176 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="07D520EA-A65A-F4AF-FB36-17E68CD6A14F" name="T_GS1_NOTIFICACAO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>9873B56B-2E96-E0ED-3E7E-708514BABBD5</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<ordsAlias>t_gsi_notificacao</ordsAlias>
+<beforeCreate><![CDATA[CREATE OR REPLACE TRIGGER trg_before_insert_notificacao
+BEFORE INSERT ON T_GS1_NOTIFICACAO
+FOR EACH ROW
+DECLARE
+    V_NUMERO_TELEFONE VARCHAR2(20);
+BEGIN
+    SELECT PCT_Telefone INTO V_NUMERO_TELEFONE
+    FROM T_GS1_PACIENTE
+    WHERE PCT_CNS = :NEW.PCT_CNS;
+
+    IF V_NUMERO_TELEFONE IS NOT NULL THEN
+        :NEW.NTF_Numero_Telefone := V_NUMERO_TELEFONE;
+    ELSE
+        :NEW.NTF_Numero_Telefone := 'Número de telefone não registrado';
+    END IF;
+
+    IF :NEW.NTF_Mensagem IS NULL THEN
+        :NEW.NTF_Mensagem := 'Lembrete: Sua consulta está agendada para amanhã. Por favor, confirme sua presença.';
+        --Mensagem exemplo. Posteriormente usar mensagem gerada pelo usuário através da UI
+    END IF;
+
+    :NEW.NTF_Dt := :NEW.AGD_Data - 2;
+    --Notificação aparece 2 dias antes do retorno esperado (configurável)
+END;
+/
+]]></beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_GSI_AGENDAMENTO_T_GS1_LAUDO_PCT_CNS" id="39592520-786D-DB5A-13EE-921E98940E57">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>D475A280-646A-9E5F-76C5-32A086A571B7</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9FE35EEF-CE58-3535-1CBB-1F36228E7B3E" referredColumn="70B3E0A5-CC45-AAB4-B5B2-2ED94A5D2DD9"/>
+</associations>
+</Column>
+<Column name="T_GSI_AGENDAMENTO_T_GS1_LAUDO_ID_Laudo" id="9E902EFC-02C9-FC4D-B017-3A5CCABAD3AE">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>CEFE0FF8-73D5-E6F8-0CEE-CBBA67AEA714</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9FE35EEF-CE58-3535-1CBB-1F36228E7B3E" referredColumn="5BB2C015-F3DC-FCCF-4841-4055D1797BD5"/>
+</associations>
+</Column>
+<Column name="T_GSI_AGENDAMENTO_Id_agendamento" id="BE0C7C20-E881-D1EC-DF65-989F424C59E0">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>563102AD-3523-BA87-E4E2-058B972086C4</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9FE35EEF-CE58-3535-1CBB-1F36228E7B3E" referredColumn="4B0A59BA-231A-7472-7B6D-84085DCF0B29"/>
+</associations>
+</Column>
+<Column name="ID_Notificacao" id="DB53EC1A-5ACD-DB02-DBFC-BCC733468504">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>A66C0012-9476-B1EF-25A6-647922F794C2</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NTF_Dt" id="363E580C-5A30-85BD-7E4C-4CC0D79BDF22">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>0CF8FFEF-7CE3-2870-4BC6-C2A426ABA0A9</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NTF_Tipo" id="1B202108-6AE4-59D8-4982-73366660FD24">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>1A05D28F-A014-2404-32C6-5FC6A28C8A54</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NTF_Mensagem" id="70FA1BED-92F9-1B3D-3C01-DC52C224FF79">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>E37AD97E-27E5-AB95-8E48-14186BD73C11</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="336BB15F-D7E2-5E0C-1433-5249C770FFE2" name="T_GSI_NOTIFICACAO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>7024D662-5728-4369-9DBB-7C8E3497CEFF</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39592520-786D-DB5A-13EE-921E98940E57"/>
+<colUsage columnID="9E902EFC-02C9-FC4D-B017-3A5CCABAD3AE"/>
+<colUsage columnID="BE0C7C20-E881-D1EC-DF65-989F424C59E0"/>
+<colUsage columnID="DB53EC1A-5ACD-DB02-DBFC-BCC733468504"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11325574-5B03-3C50-7000-6C38029B1F85" name="T_GSI_NOTIFICACAO__IDX">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="BE0C7C20-E881-D1EC-DF65-989F424C59E0"/>
+<colUsage columnID="9E902EFC-02C9-FC4D-B017-3A5CCABAD3AE"/>
+<colUsage columnID="39592520-786D-DB5A-13EE-921E98940E57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08751290-6118-957B-3F84-A1CD38DBBE47" name="T_GSI_NOTIFICACAO_T_GSI_AGENDAMENTO_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39592520-786D-DB5A-13EE-921E98940E57"/>
+<colUsage columnID="9E902EFC-02C9-FC4D-B017-3A5CCABAD3AE"/>
+<colUsage columnID="BE0C7C20-E881-D1EC-DF65-989F424C59E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

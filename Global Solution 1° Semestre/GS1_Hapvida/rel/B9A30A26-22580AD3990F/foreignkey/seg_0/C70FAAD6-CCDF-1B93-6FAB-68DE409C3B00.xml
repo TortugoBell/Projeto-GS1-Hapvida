@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C70FAAD6-CCDF-1B93-6FAB-68DE409C3B00" containerWithKeyObject="594FD053-82E2-88F4-C658-1D5CCCEE3F85" localFKIndex="A71C6C0F-A62C-0069-6E8B-1E134B2E65F5" name="T_GSI_HISTORICO_T_GS1_PACIENTE_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>AA3CF1FB-2099-DDC8-3351-BE28EAD3B415</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<referredTableLongName>T_GS1_PACIENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4500F4BC-8F2C-15EA-D398-BF7D3C0A121F</referredTableID>
+<keyObject>10B9235A-B591-02F7-AC16-6EE22CD92162</keyObject>
+<referredKeyID>10B9235A-B591-02F7-AC16-6EE22CD92162</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PCT_CNS</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

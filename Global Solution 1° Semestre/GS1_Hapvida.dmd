@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="GS1_Hapvida" id="80002080-D8DC-A60C-6DD8-2C0953A09002" version="3.5">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-23 23:47:01 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>80002080-D8DC-A60C-6DD8-2C0953A09002</designId>
+</OSDM_Design>

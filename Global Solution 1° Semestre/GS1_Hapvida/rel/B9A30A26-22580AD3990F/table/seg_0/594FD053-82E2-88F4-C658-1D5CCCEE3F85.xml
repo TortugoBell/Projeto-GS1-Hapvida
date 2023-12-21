@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="594FD053-82E2-88F4-C658-1D5CCCEE3F85" name="T_GS1_HISTORICO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>08803577-F27A-421A-0DFB-C2F96277643E</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<ordsAlias>t_gsi_historico</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_GS1_PACIENTE_PCT_CNS" id="C2F655FA-F0D3-271F-A258-580170566517">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>602C0C0F-3DAB-949C-8BB4-D4767B071579</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C70FAAD6-CCDF-1B93-6FAB-68DE409C3B00" referredColumn="2444CFB4-5C66-4197-A30F-22340A8B786D"/>
+</associations>
+</Column>
+<Column name="ID_Historico" id="A8B947FA-F5CE-9341-543D-6E695573CD7D">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>EFA9A53E-C055-4716-9FDD-B93FEE747A75</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIST_Data_Comparecida" id="FE6CAD5D-5F05-6011-47DC-D2F517821BC8">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>A486AB47-94DB-3CD9-C670-3FA5D395E5CD</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIST_UBS_Comparecida" id="1458250B-6175-28AB-DE73-0E57966FB24D">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>DDD94985-4FFD-C8C5-3DB3-B5CEB7EE0F0C</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4EB64C76-3CB0-D6C6-A05A-6F313A125935" name="T_GSI_HISTORICO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>1E9EEED3-1A47-1F1D-6901-8D1F680BD990</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2F655FA-F0D3-271F-A258-580170566517"/>
+<colUsage columnID="A8B947FA-F5CE-9341-543D-6E695573CD7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A71C6C0F-A62C-0069-6E8B-1E134B2E65F5" name="T_GSI_HISTORICO_T_GS1_PACIENTE_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>AA3CF1FB-2099-DDC8-3351-BE28EAD3B415</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2F655FA-F0D3-271F-A258-580170566517"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

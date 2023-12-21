@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A087C2D4-FBAD-A804-A6F7-8CC4EA61C77A" name="T GS1 AGENDAMENTO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:06:35 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="T GS1 LAUDO PCT CNS" id="3DF47036-1E99-70B5-6E2A-A4E71CAF3349">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:29:50 UTC</createdTime>
+<generatorID>56ABBE31-A98E-CE45-D6B6-4014420FCD0A</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>26109B97-8A32-1CBC-910D-AD6639B238ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="T GS1 LAUDO ID Laudo" id="D1C66356-0B36-F6E7-D1C1-3055A297374A">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:29:50 UTC</createdTime>
+<generatorID>56ABBE31-A98E-CE45-D6B6-4014420FCD0A</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>A6324E7F-00AF-48B7-364B-D274167D1E50</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Agendamento" id="AE969D0D-1699-427A-A06B-1E9CC72EF6C6">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:07:09 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AGD Data" id="D64B7E17-D69C-7B14-9B60-9BF8B2389712">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:07:53 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AGD Status" id="9B9AEB94-2661-8ED9-2062-B82BF2450EB6">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:08:40 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D202265C-1BAF-3ECD-B3AC-414F1ADA7C04" name="T_GSI_AGENDAMENTO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:07:21 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3DF47036-1E99-70B5-6E2A-A4E71CAF3349</attributeRef>
+<attributeRef>D1C66356-0B36-F6E7-D1C1-3055A297374A</attributeRef>
+<attributeRef>AE969D0D-1699-427A-A06B-1E9CC72EF6C6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

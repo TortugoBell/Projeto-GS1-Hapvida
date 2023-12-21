@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="T GSI HISTORICO T GS1 PACIENTE FK" directorySegmentName="seg_0" id="AA3CF1FB-2099-DDC8-3351-BE28EAD3B415">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:30:26 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<sourcePk>761F2836-072C-21E4-8AAA-C7E9425F3169</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3801BA9D-B39D-BA07-04BE-1CEC7640A197</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>08803577-F27A-421A-0DFB-C2F96277643E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

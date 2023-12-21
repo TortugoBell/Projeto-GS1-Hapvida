@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="97D75F45-D40E-2557-0FA7-1E2A8934C761" containerWithKeyObject="4500F4BC-8F2C-15EA-D398-BF7D3C0A121F" localFKIndex="BA8045D8-2F29-C7BA-BCCB-9535D49A5D45" name="T_GS1_PACIENTE_T_GS1_USUARIO_UBS_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>073E2F27-BB9A-1606-AE71-C7FA1326F2E3</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<referredTableLongName>T_GS1_USUARIO_UBS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4D6B05A6-ED5E-A717-8CEA-2BD9B8D10439</referredTableID>
+<keyObject>181B36F6-E80D-6B8E-D4EC-23ACC38BC905</keyObject>
+<referredKeyID>181B36F6-E80D-6B8E-D4EC-23ACC38BC905</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_UBS,UBS_Area</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

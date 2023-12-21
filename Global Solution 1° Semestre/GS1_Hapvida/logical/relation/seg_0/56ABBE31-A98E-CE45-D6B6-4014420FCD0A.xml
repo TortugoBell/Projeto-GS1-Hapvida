@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="T GSI AGENDAMENTO T GS1 LAUDO FK" directorySegmentName="seg_0" id="56ABBE31-A98E-CE45-D6B6-4014420FCD0A">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:29:50 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<sourcePk>A073005D-B28C-823C-A758-2EB24B7131E4</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>10487588-B486-1568-352D-96305483FD73</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A087C2D4-FBAD-A804-A6F7-8CC4EA61C77A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

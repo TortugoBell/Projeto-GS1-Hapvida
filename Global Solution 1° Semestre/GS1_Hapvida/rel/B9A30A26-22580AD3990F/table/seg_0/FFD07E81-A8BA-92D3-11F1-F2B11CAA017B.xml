@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FFD07E81-A8BA-92D3-11F1-F2B11CAA017B" name="T_GS1_LAUDO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>10487588-B486-1568-352D-96305483FD73</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<beforeCreate><![CDATA[CREATE OR REPLACE PROCEDURE SP_GERAR_DATAS_CONSULTA(
+    P_PCT_CNS IN VARCHAR2,
+    P_ID_LAUDO IN NUMBER,
+    P_FREQUENCIA IN VARCHAR2,
+    P_DT_INICIAL IN TIMESTAMP
+)
+AS
+    V_DATA_CONSULTA TIMESTAMP;
+    V_INTERVAL NUMBER;
+BEGIN
+	--Exemplo com frequência semanal:
+    V_INTERVAL := CASE P_FREQUENCIA
+                    WHEN 'Semanal' THEN 7
+                  END;
+
+    FOR I IN 1..12 LOOP
+        V_DATA_CONSULTA := P_DT_INICIAL + (V_INTERVAL * I);
+        INSERT INTO T_GS1_AGENDAMENTO (PCT_CNS, ID_Laudo, AGD_Data, AGD_Status)
+        VALUES (P_PCT_CNS, P_ID_LAUDO, V_DATA_CONSULTA, 'Pendente'); --Exemplo para status não confirmado
+    END LOOP;
+END SP_GERAR_DATAS_CONSULTA;
+/
+]]></beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_GS1_PACIENTE_PCT_CNS" id="319E751F-3059-8D5A-DACE-4C02DF69914A">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>26109B97-8A32-1CBC-910D-AD6639B238ED</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2576C7B6-037E-1877-9939-3A88F9A50FBF" referredColumn="2444CFB4-5C66-4197-A30F-22340A8B786D"/>
+</associations>
+</Column>
+<Column name="ID_Laudo" id="6427BECD-CED3-D453-4300-6FC58348AA1F">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>A6324E7F-00AF-48B7-364B-D274167D1E50</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LD_Frequencia" id="CE45CE82-90B2-C01B-47A5-14D1D65E232C">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>FA51BA5A-C24A-6C16-3A29-6484088C95E7</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LD_Dt_Inicial" id="02C96C57-DAA3-8E38-572F-CA25C19EC2C6">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>53BDA324-9904-FF1A-C25B-2E69A2B90724</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8933F0E1-7905-17A4-5C47-FB844EEDF329" name="T_GS1_LAUDO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>A073005D-B28C-823C-A758-2EB24B7131E4</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="319E751F-3059-8D5A-DACE-4C02DF69914A"/>
+<colUsage columnID="6427BECD-CED3-D453-4300-6FC58348AA1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30930434-7F04-7F55-0EB3-7453775F1D4F" name="T_GS1_LAUDO_T_GS1_PACIENTE_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>FCC0D2A6-EC35-479B-9B02-97E9B83713A3</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="319E751F-3059-8D5A-DACE-4C02DF69914A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9FE35EEF-CE58-3535-1CBB-1F36228E7B3E" containerWithKeyObject="07D520EA-A65A-F4AF-FB36-17E68CD6A14F" localFKIndex="08751290-6118-957B-3F84-A1CD38DBBE47" name="T_GSI_NOTIFICACAO_T_GSI_AGENDAMENTO_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<referredTableLongName>T_GSI_AGENDAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3C259175-CA0E-C83A-5FEE-D343C312CD8F</referredTableID>
+<keyObject>E74BFB2C-1BCB-26A5-3967-D2BEB0308DFB</keyObject>
+<referredKeyID>E74BFB2C-1BCB-26A5-3967-D2BEB0308DFB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>T_GS1_LAUDO_PCT_CNS,T_GS1_LAUDO_ID_Laudo,Id_agendamento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

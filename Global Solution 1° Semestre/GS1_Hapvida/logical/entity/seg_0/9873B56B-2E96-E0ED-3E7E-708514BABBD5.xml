@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9873B56B-2E96-E0ED-3E7E-708514BABBD5" name="T GS1 NOTIFICACAO">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:14:16 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="T GSI AGENDAMENTO T GS1 LAUDO PCT CNS" id="D475A280-646A-9E5F-76C5-32A086A571B7">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:29:50 UTC</createdTime>
+<generatorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>3DF47036-1E99-70B5-6E2A-A4E71CAF3349</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="T GSI AGENDAMENTO Id agendamento" id="563102AD-3523-BA87-E4E2-058B972086C4">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:31:59 UTC</createdTime>
+<generatorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>AE969D0D-1699-427A-A06B-1E9CC72EF6C6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="T GSI AGENDAMENTO T GS1 LAUDO ID Laudo" id="CEFE0FF8-73D5-E6F8-0CEE-CBBA67AEA714">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:29:50 UTC</createdTime>
+<generatorID>5871BE0E-AFCE-2420-0818-6A85DC0C3736</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<referedAttribute>D1C66356-0B36-F6E7-D1C1-3055A297374A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Notificacao" id="A66C0012-9476-B1EF-25A6-647922F794C2">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:14:40 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NTF Dt" id="0CF8FFEF-7CE3-2870-4BC6-C2A426ABA0A9">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:14:53 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NTF Tipo" id="1A05D28F-A014-2404-32C6-5FC6A28C8A54">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:15:09 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NTF Mensagem" id="E37AD97E-27E5-AB95-8E48-14186BD73C11">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:15:24 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7024D662-5728-4369-9DBB-7C8E3497CEFF" name="T_GSI_NOTIFICACAO_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 00:14:53 UTC</createdTime>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<engineerTo>
+<item key="B9A30A26-053F-B5AC-4FFB-22580AD3990F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D475A280-646A-9E5F-76C5-32A086A571B7</attributeRef>
+<attributeRef>CEFE0FF8-73D5-E6F8-0CEE-CBBA67AEA714</attributeRef>
+<attributeRef>563102AD-3523-BA87-E4E2-058B972086C4</attributeRef>
+<attributeRef>A66C0012-9476-B1EF-25A6-647922F794C2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

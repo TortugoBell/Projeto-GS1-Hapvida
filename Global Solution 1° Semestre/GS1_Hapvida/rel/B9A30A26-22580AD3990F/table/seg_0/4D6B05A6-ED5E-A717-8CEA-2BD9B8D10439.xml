@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4D6B05A6-ED5E-A717-8CEA-2BD9B8D10439" name="T_GS1_USUARIO_UBS">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>59E26BAE-2482-D620-83B9-EB0186BCEAA7</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<afterCreate><![CDATA[INSERT INTO UBS (UBS_Email, UBS_Senha, UBS_nm, UBS_Contato, UBS_Area)
+VALUES ('ubs1@example.com', hash_password('senha123'), 'Nome da UBS 1', '123456789', 1),
+       ('ubs2@example.com', hash_password('outrasenha'), 'Nome da UBS 2', '987654321', 2);
+]]></afterCreate>
+<beforeCreate><![CDATA[CREATE OR REPLACE FUNCTION hash_password(plain_text VARCHAR)
+RETURN VARCHAR2 AS
+  salt VARCHAR2(32);
+BEGIN
+  salt := DBMS_RANDOM.STRING('X', 32); -- Gera um salt aleatório
+  RETURN DBMS_CRYPTO.HASH(UTL_RAW.CAST_TO_RAW(plain_text || salt), 3); -- 3 representa o algoritmo SHA-256
+END;
+/
+]]></beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UBS" id="3746FD8E-D4F4-8543-EB18-B66C4E00916A">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>149541D6-7412-20DD-2F7C-0A3DD03E605C</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UBS_Area" id="6F280436-2092-F7D1-1B9C-C78E3820A29B">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>9526C55A-B905-17CD-A542-06A04DDFF16C</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UBS_Nm" id="3261B4D9-65AB-2F3C-9533-CE4B1039FA82">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>2533CDE6-B45E-2306-1F85-D6043354353B</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UBS_Email" id="90D09438-961D-7E2E-5D55-716D91534C51">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>B54221A2-13DA-A2F6-4DBF-E5DD2B4A2558</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UBS_Senha" id="DDDD8133-3E71-9A53-7534-E5283A048623">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>DAF73303-6E1A-1020-F9CA-950BA9AF8895</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UBS_Contato" id="33968830-12DC-913D-3D0C-E7596F94E617">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>3A1C9DBE-FDC4-2105-FC5E-3F07364CC537</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="181B36F6-E80D-6B8E-D4EC-23ACC38BC905" name="T_GS1_USUARIO_UBS_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>FD9C226C-6D7A-5EBD-59E5-EE93AE912002</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3746FD8E-D4F4-8543-EB18-B66C4E00916A"/>
+<colUsage columnID="6F280436-2092-F7D1-1B9C-C78E3820A29B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4500F4BC-8F2C-15EA-D398-BF7D3C0A121F" name="T_GS1_PACIENTE">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>3801BA9D-B39D-BA07-04BE-1CEC7640A197</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PCT_CNS" id="2444CFB4-5C66-4197-A30F-22340A8B786D">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>4DED2207-8460-F230-CBF1-781F5815BFCF</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_GS1_USUARIO_UBS_Id_UBS" id="79568BBC-D7CE-B7F6-77EC-CD1D36926CAE">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>2C760355-2A53-71EE-CC8E-7AB6CD212FDB</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97D75F45-D40E-2557-0FA7-1E2A8934C761" referredColumn="3746FD8E-D4F4-8543-EB18-B66C4E00916A"/>
+</associations>
+</Column>
+<Column name="T_GS1_USUARIO_UBS_UBS_Area" id="B151EC46-2279-9347-BB08-21F7A9268118">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>67AEA22C-9986-E7C3-11CB-F1FA628EE735</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97D75F45-D40E-2557-0FA7-1E2A8934C761" referredColumn="6F280436-2092-F7D1-1B9C-C78E3820A29B"/>
+</associations>
+</Column>
+<Column name="PCT_Nm" id="D212E923-9B80-2779-BBA7-BD63EB1963B2">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>C4F38BCE-A2BA-25A2-1E3F-7F7B877E1B68</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PCT_Documento" id="D4D7EB4C-DC0C-5EFD-3A4A-04590B420772">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>11716D01-824D-0036-9835-DE574AF2F0E9</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PCT_Telefone" id="5D1C0B8B-16B5-4470-F5F7-00D95F3516EB">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>346FBADC-948B-C133-4C9E-1BFC61849308</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10B9235A-B591-02F7-AC16-6EE22CD92162" name="T_GS1_PACIENTE_PK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>761F2836-072C-21E4-8AAA-C7E9425F3169</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2444CFB4-5C66-4197-A30F-22340A8B786D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA8045D8-2F29-C7BA-BCCB-9535D49A5D45" name="T_GS1_PACIENTE_T_GS1_USUARIO_UBS_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>073E2F27-BB9A-1606-AE71-C7FA1326F2E3</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79568BBC-D7CE-B7F6-77EC-CD1D36926CAE"/>
+<colUsage columnID="B151EC46-2279-9347-BB08-21F7A9268118"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="25219673-61FA-6267-7821-996147573E63" containerWithKeyObject="3C259175-CA0E-C83A-5FEE-D343C312CD8F" localFKIndex="0C5226C1-F956-CEA8-89A8-03A2DC685ED0" name="T_GSI_AGENDAMENTO_T_GS1_LAUDO_FK">
+<createdBy>Pichau</createdBy>
+<createdTime>2023-11-24 01:48:56 UTC</createdTime>
+<generatorID>56ABBE31-A98E-CE45-D6B6-4014420FCD0A</generatorID>
+<ownerDesignName>GS1_Hapvida</ownerDesignName>
+<referredTableLongName>T_GS1_LAUDO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FFD07E81-A8BA-92D3-11F1-F2B11CAA017B</referredTableID>
+<keyObject>8933F0E1-7905-17A4-5C47-FB844EEDF329</keyObject>
+<referredKeyID>8933F0E1-7905-17A4-5C47-FB844EEDF329</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>T_GS1_PACIENTE_PCT_CNS,ID_Laudo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
